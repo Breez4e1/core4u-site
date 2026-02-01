@@ -267,4 +267,13 @@ input:focus, textarea:focus{border-color: rgba(79,209,255,.55)}
 .contact-card a:hover {
   text-decoration: underline;
 }
+/* Page transition */
+body {
+  opacity: 1;
+  transition: opacity 0.35s ease;
+}
+
+body.fade-out {
+  opacity: 0;
+}
 
