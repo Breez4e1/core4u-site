@@ -1,4 +1,9 @@
 // Core4U Static Site (single page)
+document.body.style.opacity = 0;
+window.addEventListener('load', () => {
+  document.body.style.opacity = 1;
+});
+
 const btn = document.getElementById('menuBtn');
 const nav = document.querySelector('.nav');
 if (btn && nav) {
