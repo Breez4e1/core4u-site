@@ -19,3 +19,24 @@ if (btn && nav) {
 }
 const y = document.getElementById('year');
 if (y) y.textContent = new Date().getFullYear();
+// Smooth page transition
+document.querySelectorAll('a[href]').forEach(link => {
+  const url = link.getAttribute('href');
+
+  // Only apply to internal page navigation
+  if (
+    url &&
+    !url.startsWith('#') &&
+    !url.startsWith('http') &&
+    !url.startsWith('mailto:')
+  ) {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      document.body.classList.add('fade-out');
+
+      setTimeout(() => {
+        window.location.href = url;
+      }, 350); // ← delay in ms
+    });
+  }
+});
