@@ -1,27 +1,129 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Contact</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Contact Core4U Solutions Limited" />
+  <meta name="theme-color" content="#0b1220" />
+  <title>Contact — Core4U Solutions Limited</title>
+
+  <meta property="og:title" content="Contact — Core4U Solutions Limited" />
+  <meta property="og:description" content="Tell us what you’re building. We’ll respond within 1–2 business days." />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-  <nav class="nav">
-    <a href="index.html">Home</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="Core4U Home">
+      <img class="brand-mark" src="assets/mark.svg" alt="" />
+      <span class="brand-text">Core4U</span>
+      <span class="brand-sub">Solutions Limited</span>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#framework">Core4E</a>
+      <a href="index.html#about">About</a>
+      <a class="btn" href="contact.html" aria-current="page">Contact</a>
+    </nav>
+
+    <button class="menu" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
 
   <main>
-    <h1>Contact</h1>
+    <!-- Page Hero -->
+    <section class="hero" style="padding-top: 96px;">
+      <div class="hero-inner">
+        <p class="kicker">Let’s talk</p>
+        <h1>Contact Core4U</h1>
+        <p class="subtitle">Tell us what you’re building. We’ll respond within 1–2 business days.</p>
 
-    <p>Email: yourname@email.com</p>
-    <p>GitHub: https://github.com/breez4e1</p>
+        <div class="hero-metrics" aria-label="Contact highlights">
+          <div class="metric">
+            <div class="metric-value">Fast reply</div>
+            <div class="metric-label">1–2 business days</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">Clear scope</div>
+            <div class="metric-label">We ask the right questions</div>
+          </div>
+          <div class="metric">
+            <div class="metric-value">Ops-first</div>
+            <div class="metric-label">Reliable delivery mindset</div>
+          </div>
+        </div>
+      </div>
 
-    <br>
+      <!-- A simple info card matching your homepage style -->
+      <div class="hero-card" aria-hidden="true">
+        <div class="card-title">What to include</div>
+        <div class="card-row"><span>Goal</span><span>What you want to achieve</span></div>
+        <div class="card-row"><span>Timeline</span><span>When you need it</span></div>
+        <div class="card-row"><span>Context</span><span>Current stack / constraints</span></div>
+        <div class="spark"><div class="spark-line"></div></div>
+      </div>
+    </section>
 
-    <a href="index.html">← Back to Home</a>
-  </main>
+    <!-- Contact Section -->
+    <section class="section section-contact">
+      <div class="section-head">
+        <h2>Send a message</h2>
+        <p>We’ll get back to you with next steps and a clear plan.</p>
+      </div>
 
-</body>
-</html>
+      <div class="contact">
+        <form class="form" action="mailto:contact@core4u.com" method="post" enctype="text/plain">
+          <label>
+            Name
+            <input name="name" type="text" placeholder="Your name" autocomplete="name" required />
+          </label>
+
+          <label>
+            Email
+            <input name="email" type="email" placeholder="name@company.com" autocomplete="email" required />
+          </label>
+
+          <label>
+            Topic
+            <input name="topic" type="text" placeholder="e.g., Monitoring, Reliability, Deployment" />
+          </label>
+
+          <label>
+            Message
+            <textarea name="message" rows="6" placeholder="Briefly describe your system and what you need help with." required></textarea>
+          </label>
+
+          <button class="btn primary" type="submit">Send</button>
+          <p class="hint">
+            This form uses your email client (mailto). If you want a real backend form, tell me your hosting choice.
+          </p>
+        </form>
+
+        <div class="contact-card">
+          <h3>Core4U Solutions Limited</h3>
+
+          <p><strong>Email:</strong> <a href="mailto:contact@core4u.com">contact@core4u.com</a></p>
+          <p><strong>Hours:</strong> Mon–Fri, 9:00–18:00</p>
+          <p><strong>Response time:</strong> 1–2 business days</p>
+
+          <div class="mini" style="margin-top: 16px;">
+            <div class="mini-k">Typical engagements</div>
+            <div class="mini-v">Observability · SLOs · Incident reviews · Infra hardening · Performance tuning</div>
+          </div>
+
+          <div class="mini" style="margin-top: 12px;">
+            <div class="mini-k">Framework</div>
+            <div class="mini-v">Core4E (Efficiency · Effectiveness · Evolution · Engineering)</div>
+          </div>
+
+          <div style="margin-top: 16px; display: flex; gap: 10px; flex-wrap: wrap;">
+            <a class="btn ghost" h
