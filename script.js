@@ -1,4 +1,4 @@
-// Core4U static site shared behavior
+// HKCoreForU static site shared behavior
 const menuButton = document.getElementById('menuBtn');
 
 if (menuButton) {

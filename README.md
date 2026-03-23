@@ -1,4 +1,4 @@
-# Core4U Static Home (5 Sections)
+# HKCoreForU Static Home (5 Sections)
 
 Single-page corporate homepage for **HKCoreForU Systems Limited** (HTML/CSS/JS).
 
