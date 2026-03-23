@@ -1,6 +1,6 @@
 # Core4U Static Home (5 Sections)
 
-Single-page corporate homepage for **Core4U Solutions Limited** (HTML/CSS/JS).
+Single-page corporate homepage for **HKCoreForU Systems Limited** (HTML/CSS/JS).
 
 ## Run locally
 - Open `index.html` in a browser, or:
@@ -9,4 +9,4 @@ Single-page corporate homepage for **Core4U Solutions Limited** (HTML/CSS/JS).
 ## Quick edits
 - Copy/content: `index.html`
 - Styles: `style.css`
-- Marks: `assets/mark.svg`, `assets/favicon.svg`
+- Mark and favicon: `assets/logo.png`

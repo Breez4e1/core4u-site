@@ -1,47 +1,32 @@
-// Core4U Static Site (single page)
-document.body.style.opacity = 0;
-window.addEventListener('load', () => {
-  document.body.style.opacity = 1;
-});
+// Core4U static site shared behavior
+const menuButton = document.getElementById('menuBtn');
 
-const btn = document.getElementById('menuBtn');
-const nav = document.querySelector('.nav');
-if (btn && nav) {
-  btn.addEventListener('click', () => {
-    const open = nav.style.display === 'flex';
-    nav.style.display = open ? 'none' : 'flex';
-    nav.style.flexDirection = 'column';
-    nav.style.position = 'absolute';
-    nav.style.right = '16px';
-    nav.style.top = '64px';
-    nav.style.padding = '12px';
-    nav.style.background = 'rgba(5,10,20,.95)';
-    nav.style.border = '1px solid rgba(255,255,255,.10)';
-    nav.style.borderRadius = '14px';
-    nav.style.gap = '10px';
-    btn.setAttribute('aria-expanded', String(!open));
+if (menuButton) {
+  menuButton.addEventListener('click', () => {
+    const willOpen = !document.body.classList.contains('nav-open');
+    document.body.classList.toggle('nav-open', willOpen);
+    menuButton.setAttribute('aria-expanded', String(willOpen));
   });
 }
-const y = document.getElementById('year');
-if (y) y.textContent = new Date().getFullYear();
-// Smooth page transition
+
+const yearNode = document.getElementById('year');
+if (yearNode) {
+  yearNode.textContent = String(new Date().getFullYear());
+}
+
+// Smooth page transition for local page-to-page navigation.
 document.querySelectorAll('a[href]').forEach(link => {
-  const url = link.getAttribute('href');
-
-  // Only apply to internal page navigation
-  if (
-    url &&
-    !url.startsWith('#') &&
-    !url.startsWith('http') &&
-    !url.startsWith('mailto:')
-  ) {
-    link.addEventListener('click', e => {
-      e.preventDefault();
-      document.body.classList.add('fade-out');
-
-      setTimeout(() => {
-        window.location.href = url;
-      }, 350); // ← delay in ms
-    });
+  const href = link.getAttribute('href');
+  if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('http')) {
+    return;
   }
+
+  link.addEventListener('click', event => {
+    event.preventDefault();
+    document.body.classList.add('fade-out');
+
+    window.setTimeout(() => {
+      window.location.href = href;
+    }, 350);
+  });
 });
